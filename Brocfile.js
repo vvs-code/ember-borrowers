@@ -26,5 +26,11 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/ember-localstorage-adapter/localstorage_adapter.js');
+app.import('bower_components/picnic/releases/v2.4.css');
+app.import('vendor/fontello/fontello.css');
+app.import('vendor/fontello/font/fontello.ttf', {destDir: 'font'});
+app.import('vendor/fontello/font/fontello.eot', {destDir: 'font'});
+app.import('vendor/fontello/font/fontello.svg', {destDir: 'font'});
+app.import('vendor/fontello/font/fontello.woff', {destDir: 'font'});
 
 module.exports = app.toTree();
