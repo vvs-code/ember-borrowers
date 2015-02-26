@@ -13,5 +13,12 @@ export default Ember.Route.extend({
       console.log('+_ cancel action in friends bubled to friends/new router', this, arguments);
       return true;
     }
+  },
+  deactivate: function() {
+    var model = this.modelFor('friends/new');
+
+    if(model.get('isNew')){
+      model.destroyRecord();
+    }
   }
 });

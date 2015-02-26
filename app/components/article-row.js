@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   articleStates: null, // pass-in
   autoSave: function() {
     var article = this.get('article');
-    if(!article.get('isnew')) {
+    if(!article.get('isNew')) {
       this.sendAction('save', article);
     }
   },
