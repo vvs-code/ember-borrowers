@@ -14,7 +14,8 @@
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
     "picnic": "*",
-    "moment": "~2.9.0"
+    "moment": "~2.9.0",
+    "ic-ajax": "~2.0.2"
   },
   "devDependencies": {
     "ember-localstorage-adapter": "~0.5.2"
