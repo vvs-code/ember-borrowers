@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'borrowers',
+    //podModulePrefix: 'app',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
