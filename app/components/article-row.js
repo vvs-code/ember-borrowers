@@ -4,9 +4,16 @@ export default Ember.Component.extend({
   tagName: 'tr',
   article: null, // pass-in
   articleStates: null, // pass-in
-  actions: {
-    saveArticle: function(article) {
+  autoSave: function() {
+    var article = this.get('article');
+    if(!article.get('isnew')) {
       this.sendAction('save', article);
     }
-  }
+  },
+  stateChanged: function() {
+    var article = this.get('article');
+    if(article.get('isDirty') && !article.get('isSaving')) {
+      Ember.run.once(this, this.autoSave);
+    }
+  }.on('init').observes('article.state')
 });
