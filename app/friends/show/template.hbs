@@ -3,6 +3,9 @@
     <p>Last name: {{model.lastName}}</p>
     <p>Email: {{model.email}}</p>
     <p>Twitter: {{model.twitter}}</p>
-    <p>{{lint-to 'Edit info' 'friends.edit' model}}</p>
+    <p>{{link-to 'Edit info' 'friends.edit' model}}</p>
     <p><a href="#" {{action 'delete' model}}>delete</a></p>
+</div>
+<div class="articles-container">
+    {{outlet}}
 </div>
