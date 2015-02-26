@@ -2,6 +2,14 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+// in Brocfile.js
+// load all .hbs files, not just those named template
+EmberApp.prototype._podTemplatePatterns = function() {
+  return this.registry.extensionsForType('template').map(function(extension) {
+    return new RegExp('.' + extension + '$');
+  });
+};
+
 var app = new EmberApp();
 
 // Use `app.import` to add additional libraries to the generated
