@@ -1,5 +1,6 @@
 {{#link-to 'friends'}}Back to list{{/link-to}}
-{{#link-to 'friends.edit' model.id}}Edit{{/link-to}}
+{{link-to 'Edit info' 'friends.edit' model.id}}
+<a href="#" {{action delete model}}>Remove item</a>
 <ul>
     <li>First name: {{model.firstName}}</li>
     <li>Last name: {{model.lastName}}</li>

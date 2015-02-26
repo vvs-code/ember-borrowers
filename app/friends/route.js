@@ -5,13 +5,11 @@ export default Ember.Route.extend({
     return this.store.findAll('friend');
   },
   actions: {
-    save: function() {
-      console.log('+_ save action in friends bubled to friends router', this, arguments);
-      return true;
-    },
-    cancel: function() {
-      console.log('+_ cancel action in friends bubled to friends router', this, arguments);
-      return true;
+    delete: function(friend) {
+      var _this = this;
+      friend.destroyRecord().then(function() {
+        _this.transitionTo('friends.index');
+      });
     }
   }
 });
