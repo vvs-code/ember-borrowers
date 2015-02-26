@@ -33,16 +33,5 @@ app.import('vendor/fontello/font/fontello.eot', {destDir: 'font'});
 app.import('vendor/fontello/font/fontello.svg', {destDir: 'font'});
 app.import('vendor/fontello/font/fontello.woff', {destDir: 'font'});
 app.import('bower_components/moment/moment.js');
-app.import('bower_components/ic-ajax/dist/named-amd/main.js', {
-  exports: {
-    'ic-ajax': [
-      'default',
-      'defineFixture',
-      'lookupFixture',
-      'raw',
-      'request'
-    ]
-  }
-});
 
 module.exports = app.toTree();
